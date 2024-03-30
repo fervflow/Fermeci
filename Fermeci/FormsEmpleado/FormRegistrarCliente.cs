@@ -1,25 +1,24 @@
-﻿using Fermeci.Database;
+﻿using Fermeci.Services;
 
 namespace Fermeci
 {
     public partial class FormRegistrarCliente : Form
     {
+        private RegistroCliente registroCliente;
         public FormRegistrarCliente()
         {
             InitializeComponent();
+            registroCliente = new RegistroCliente();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            // Obtener los valores de los campos de entrada
             string nombres = tbNombres.Text;
             string apellidos = tbApellidos.Text;
             string ci = tbCi.Text;
             string direccion = tbDireccion.Text;
             string telefono = tbTelefono.Text;
 
-            // Validar los datos
             if (string.IsNullOrEmpty(nombres))
             {
                 MessageBox.Show("El nombre es obligatorio.");
@@ -49,16 +48,8 @@ namespace Fermeci
                 MessageBox.Show("El teléfono es obligatorio.");
                 return;
             }
-
-            try
-            {
-                Conexion objDB = new Conexion();
-                objDB.registrarCliente(nombres, apellidos, ci, direccion, telefono);
-            }
-            catch
-            {
-                MessageBox.Show("No se pudo registrar los datos del cliente.");
-            }
+            
+            registroCliente.Registrar(nombres, apellidos, ci, direccion, telefono);
         }
     }
 }

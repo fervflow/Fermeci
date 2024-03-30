@@ -49,7 +49,7 @@ namespace Fermeci
                     //MessageBox.Show("Bienvenido " + nombre + " (Empleado)");
                     //Abrir la interfaz del empleado
                     this.Hide();
-                    Form1 mainForm = new Form1();
+                    FormMenuEmpleado mainForm = new FormMenuEmpleado();
                     mainForm.Show();
                 }
             }

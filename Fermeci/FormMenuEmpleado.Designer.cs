@@ -1,6 +1,6 @@
 ﻿namespace Fermeci
 {
-    partial class Form1
+    partial class FormMenuEmpleado
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuEmpleado));
             pSubMenu = new Panel();
             btHistorialVentas = new Button();
             btRegistrarProveedor = new Button();
@@ -286,7 +286,7 @@
             labelCopy.TabIndex = 0;
             labelCopy.Text = "JEELM©2024";
             // 
-            // Form1
+            // FormMenuEmpleado
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -298,7 +298,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(816, 549);
             MinimumSize = new Size(816, 549);
-            Name = "Form1";
+            Name = "FormMenuEmpleado";
             Text = "Menú Empleado";
             Load += Form1_Load;
             pSubMenu.ResumeLayout(false);
