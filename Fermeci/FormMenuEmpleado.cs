@@ -1,8 +1,8 @@
 namespace Fermeci
 {
-    public partial class Form1 : Form
+    public partial class FormMenuEmpleado : Form
     {
-        public Form1()
+        public FormMenuEmpleado()
         {
             InitializeComponent();
             personalizar();

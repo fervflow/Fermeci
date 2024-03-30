@@ -45,16 +45,6 @@ namespace Fermeci
             }
 
             registroProveedor.Registrar(nombre, direccion, num_telefono, ubicacion);
-
-            /*try
-            {
-                Conexion objDB = new Conexion();
-                objDB.registrarProveedor(nombre, direccion, num_telefono, ubicacion);
-            }
-            catch
-            {
-                MessageBox.Show("No se pudo registrar los datos del proveedor.");
-            }*/
         }
     }
 }
