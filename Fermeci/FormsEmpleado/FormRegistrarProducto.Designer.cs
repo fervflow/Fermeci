@@ -51,11 +51,11 @@
             cbTipo = new ComboBox();
             lbBs1 = new Label();
             lbBs2 = new Label();
-            numericUpDown1 = new NumericUpDown();
+            nCantidad = new NumericUpDown();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nCantidad).BeginInit();
             SuspendLayout();
             // 
             // label7
@@ -268,22 +268,22 @@
             lbBs2.TabIndex = 40;
             lbBs2.Text = "Bs.";
             // 
-            // numericUpDown1
+            // nCantidad
             // 
-            numericUpDown1.Location = new Point(258, 322);
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(168, 23);
-            numericUpDown1.TabIndex = 41;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
+            nCantidad.Location = new Point(258, 322);
+            nCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            nCantidad.Name = "nCantidad";
+            nCantidad.Size = new Size(168, 23);
+            nCantidad.TabIndex = 41;
+            nCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nCantidad.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // FormRegistrarProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(591, 510);
-            Controls.Add(numericUpDown1);
+            Controls.Add(nCantidad);
             Controls.Add(lbBs2);
             Controls.Add(lbBs1);
             Controls.Add(cbTipo);
@@ -311,7 +311,7 @@
             Text = "Registro Producto";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nCantidad).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -340,7 +340,7 @@
         private ComboBox cbTipo;
         private Label lbBs1;
         private Label lbBs2;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown nCantidad;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
