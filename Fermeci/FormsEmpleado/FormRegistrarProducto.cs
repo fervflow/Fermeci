@@ -28,17 +28,17 @@ namespace Fermeci
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string nombre = "", tipo = "", marca = "", precio_compra;
-            string precio_venta, cantidad = "", descripcion = "";
-            precio_compra = precio_venta = "0.00";
-
+            string nombre = "", tipo = "", marca = "", descripcion = "";
+            double precio_venta, precio_compra;
+            int cantidad;
+            precio_compra = precio_venta = 0.00;
             nombre = tbNombre.Text;
             tipo = cbTipo.Text;
             marca = tbMarca.Text;
-            precio_compra = tbPrecioCompra.Text;
-            precio_venta = tbPrecioVenta.Text;
-            cantidad = nCantidad.Text;
             descripcion = tbDescripcion.Text;
+            precio_venta = double.Parse(tbPrecioVenta.Text);
+            precio_compra = double.Parse(tbPrecioCompra.Text);
+            cantidad = int.Parse(nCantidad.Text);
 
             if (string.IsNullOrEmpty(nombre))
             {
@@ -55,17 +55,17 @@ namespace Fermeci
                 MessageBox.Show("La marca es obligatoria");
                 return;
             }
-            if (string.IsNullOrEmpty(precio_compra))
+            if (precio_compra == 0)
             {
                 MessageBox.Show("El precio de la compra es obligatoria");
                 return;
             }
-            if (string.IsNullOrEmpty(precio_venta))
+            if (precio_venta == 0)
             {
                 MessageBox.Show("El precio de la venta es obligatoria");
                 return;
             }
-            if (string.IsNullOrEmpty(cantidad))
+            if (cantidad == 0)
             {
                 MessageBox.Show("La cantidad  de productos a adquirir es obligatoria");
                 return;
