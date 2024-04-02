@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 namespace Fermeci.Database
 {
     internal class Conexion
@@ -109,6 +110,26 @@ namespace Fermeci.Database
                 MessageBox.Show("Error al consultar la BD: " + ex.Message);
                 return null;
             }
+        }
+        public DataTable EjecutarConsultaTabla(string consulta)
+        {
+            abrirConexion();
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conn);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            cerrarConexion();
+            return dt;
+
+        }
+        public DataTable EjecutarConsultaTablaBuscar(string consulta, string Parametro, string var)
+        {
+            abrirConexion();
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conn);
+            adaptador.SelectCommand.Parameters.AddWithValue(Parametro, var);
+            DataTable dt = new DataTable();
+            adaptador.Fill(dt);
+            cerrarConexion();
+            return dt;
         }
     }
 }

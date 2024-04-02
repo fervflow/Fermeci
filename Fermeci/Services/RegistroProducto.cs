@@ -53,9 +53,9 @@ namespace Fermeci.Services
 
                     if (filasAfectadas > 0)
                     {
+                        MessageBox.Show("Executing...");
                         sql = "SELECT TOP 1 p.id_producto, tp.codigo FROM producto AS p" +
-                            "INNER JOIN tipo_producto AS tp ON p.tipo = tp.tipo" +
-                            "ORDER BY id_producto DESC;";
+                            "INNER JOIN tipo_producto AS tp ON p.tipo = tp.tipo ORDER BY id_producto DESC";
                         cmd = new SqlCommand(sql, conexion.conn);
                         SqlDataReader reader = cmd.ExecuteReader();
 
